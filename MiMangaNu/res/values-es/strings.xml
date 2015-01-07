@@ -24,9 +24,9 @@
     <string name="busquedanores">La Búsqueda no produjo resultados</string>
     <string name="listaen">Listado de Mangas en </string>
     <string name="buscarupdates">Buscar Actualizaciones</string>
-    <string name="nobuscarupdate">No Buscar Actulaizaciones</string>
+    <string name="nobuscarupdate">No Buscar Actualizaciones</string>
     <string name="licencia">Licencia</string>
-    <string name="esconder">Escoder de galeria</string>
+    <string name="esconder">Esconder de galeria</string>
     <string name="descargarestantes">Descargar restantes</string>
     <string name="borrado_imagenes">Se han borrado las imágenes</string>
     <string name="agregar">Agregar</string>
@@ -46,6 +46,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Thanks to sephiroth74 for the library ImageViewTouch and  thest1 for LazyList.</string>
+Thanks to sephiroth74 for the library ImageViewTouch and  thest1 for LazyList.
+</string>
 
 </resources>

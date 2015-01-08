@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mi Manga Nu</string>
+    <string name="title_activity_server_listade_mangas">List of Manga</string>
+    <string name="title_activity_activity_detalles">Details</string>
+    <string name="title_activity_activity_capitulos">Chapters</string>
+    <string name="title_activity_activity_lector">Reader</string>
+    <string name="title_activity_server_visual_navegacion">Manga in </string>
+    <string name="title_activity_activity_resultado_de_busqueda">Search Results </string>
+    <string name="action_ajustar_a">Adjust to</string>
+    <string name="cargando">Loading&#8230;</string>
+    <string name="capitulos">Chapters</string>
+    <string name="info">Information</string>
+    <string name="descargas">Downloads</string>
+    <string name="datosde">About </string>
+    <string name="agregando">Adding to Favorites</string>
+    <string name="agregado">Manga Added</string>
+    <string name="iniciando">Loading Manga</string>
+    <string name="agregadodescarga">Manga added to downloads</string>
+    <string name="mismangas">My Manga</string>
+    <string name="masmangas">More Manga</string>
+    <string name="buscandonuevo">Searching new manga for </string>
+    <string name="busquedanores">No search results</string>
+    <string name="listaen">List of Manga in </string>
+    <string name="buscarupdates">Check for updates</string>
+    <string name="nobuscarupdate">Don't check for updates</string>
+    <string name="licencia">License</string>
+    <string name="esconder">Hide from Gallery</string>
+    <string name="descargarestantes">Download remaining</string>
+    <string name="borrado_imagenes">Images deleted</string>
+    <string name="agregar">Add</string>
+    <string name="borrar">Delete</string>
+    <string name="borrarcap">Delete chapter</string>
+    <string name="resetcap">Reload Chapter</string>
+    <string name="buscarnuevos">Check for updates</string>
+    <string name="mas">More</string>
+    <string name="escondergaleria">Hide from Gallery</string>
+    <string name="filtrar">Filter</string>
+    <string name="vercomolista">View as a list</string>
+    <string name="mit">The MIT License (MIT)
+        Copyright &#169; 2014 rulosoft (Raul Haag)
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Thanks to sephiroth74 for the library ImageViewTouch and  thest1 for LazyList.
+</string>
+
+</resources>

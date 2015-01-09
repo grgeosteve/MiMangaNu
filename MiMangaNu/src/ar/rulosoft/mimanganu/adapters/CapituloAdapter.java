@@ -157,7 +157,7 @@ public class CapituloAdapter extends ArrayAdapter<Capitulo> {
 				Database.updateCapitulo(activity, result);
 				ColaDeDescarga.addCola(result);
 				ColaDeDescarga.iniciarCola(activity);
-				Toast.makeText(activity, activity.getResources().getString(R.string.iniciando), Toast.LENGTH_LONG).show();
+				Toast.makeText(activity, activity.getResources().getString(R.string.agregadodescarga), Toast.LENGTH_LONG).show();
 			}
 			super.onPostExecute(result);
 		}

@@ -2,6 +2,10 @@
 =========
 
 Lector Manga online 
+
+Cambios 1.08
+Reescrito el sistema de busqueda de actualizaciones viendo si se pudo corregir el issue #4 y resuelto lo del #15.
+
 Cambios 1.07 
 Agragado LectureEnLigne, un servidor frances y una traduccion "de google" al idioma frances.
 

@@ -28,8 +28,7 @@ public class DatosSerie extends ImageView implements Imaginable {
 	public Paint pTxt, pBack, pBlack, pTitle;
 	public String text = "";
 	public String titulo = "";
-	private float escala, ancho, alto, imgAncho, imgAlto, anchoT1, anchoT2,
-			altoT1, altoControl, finControl;
+	private float escala, ancho, alto, imgAncho, imgAlto, anchoT1, anchoT2, altoT1, altoControl, finControl;
 	Rect rOrigen;
 	ArrayList<String> lineasTit;
 	ArrayList<String> lineasLat;
@@ -98,26 +97,28 @@ public class DatosSerie extends ImageView implements Imaginable {
 		if (wfm) {
 			inicializar(titulo, text, anchoB, altoB);
 		}
-		setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec),
-				MeasureSpec.getSize(heightMeasureSpec));
+		setMeasuredDimension(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.getSize(heightMeasureSpec));
 		// super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	}
 
 	void initRecOrigen() {
-		rOrigen = new Rect(0, 0, imagen.getWidth(), imagen.getHeight());
+		if (imagen != null)
+			rOrigen = new Rect(0, 0, imagen.getWidth(), imagen.getHeight());
+		else
+			rOrigen = new Rect(0, 0, 10, 10);
+
 	}
 
 	@Override
 	public void draw(Canvas canvas) {
 
-		if (inicializada) {
+		if (inicializada && imagen != null) {
 			// variables
 			float x1, x2, y1, y2, y3, y4;
 			x1 = paddings;
 			x2 = x1 + imgAncho + paddings;
 			y1 = paddings + pTitle.getTextSize() + mDy;
-			y2 = paddings + pTitle.getTextSize() * lineasTit.size() + 2
-					* paddings + mDy;
+			y2 = paddings + pTitle.getTextSize() * lineasTit.size() + 2 * paddings + mDy;
 			y3 = y2 + pTxt.getTextSize();
 			y4 = y3 + pTxt.getTextSize() * lineasLat.size();
 
@@ -129,24 +130,21 @@ public class DatosSerie extends ImageView implements Imaginable {
 					// calcular alineacion
 					float subx = (ancho - pTitle.measureText(lineasTit.get(i))) / 2;
 					// dibujar
-					canvas.drawText(lineasTit.get(i), subx,
-							y1 + (i) * (pTitle.getTextSize()), pTitle);
+					canvas.drawText(lineasTit.get(i), subx, y1 + (i) * (pTitle.getTextSize()), pTitle);
 				}
 			}
 
 			if (lineasLat != null) {
 				for (int i = 0; i < lineasLat.size(); i++) {
 					// dibujar
-					canvas.drawText(lineasLat.get(i), x2,
-							y3 + (i) * (pTxt.getTextSize()), pTxt);
+					canvas.drawText(lineasLat.get(i), x2, y3 + (i) * (pTxt.getTextSize()), pTxt);
 				}
 			}
 
 			if (lineasAbajo != null) {
 				for (int i = 0; i < lineasAbajo.size(); i++) {
 					// dibujar
-					canvas.drawText(lineasAbajo.get(i), x1,
-							y4 + (i) * (pTxt.getTextSize()), pTxt);
+					canvas.drawText(lineasAbajo.get(i), x1, y4 + (i) * (pTxt.getTextSize()), pTxt);
 				}
 			}
 
@@ -270,13 +268,9 @@ public class DatosSerie extends ImageView implements Imaginable {
 	public void actualizarDatos() {
 		Respuesta rta = getLines(text, anchoT1, altoT1 + paddings, pTxt);
 		lineasLat = rta.getResultado();
-		lineasAbajo = getLines(rta.getResto(), anchoT2, Integer.MAX_VALUE, pTxt)
-				.getResultado();
-		lineasTit = getLines(titulo, anchoT2, Integer.MAX_VALUE, pTitle)
-				.getResultado();
-		altoControl = lineasTit.size() * pTitle.getTextSize()
-				+ (lineasAbajo.size() + lineasLat.size() + 1)
-				* pTxt.getTextSize() + 3 * paddings;
+		lineasAbajo = getLines(rta.getResto(), anchoT2, Integer.MAX_VALUE, pTxt).getResultado();
+		lineasTit = getLines(titulo, anchoT2, Integer.MAX_VALUE, pTitle).getResultado();
+		altoControl = lineasTit.size() * pTitle.getTextSize() + (lineasAbajo.size() + lineasLat.size() + 1) * pTxt.getTextSize() + 3 * paddings;
 		finControl = alto - altoControl;
 	}
 
@@ -305,9 +299,7 @@ public class DatosSerie extends ImageView implements Imaginable {
 				break;
 			}
 			invalidate();
-			altoControl = lineasTit.size() * pTitle.getTextSize()
-					+ (lineasAbajo.size() + lineasLat.size() + 1)
-					* pTxt.getTextSize() + 3 * paddings;
+			altoControl = lineasTit.size() * pTitle.getTextSize() + (lineasAbajo.size() + lineasLat.size() + 1) * pTxt.getTextSize() + 3 * paddings;
 			finControl = alto - altoControl;
 			return true;
 		}
